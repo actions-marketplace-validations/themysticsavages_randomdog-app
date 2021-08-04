@@ -13,7 +13,7 @@ url = 'https://raw.github.com/{}/{}/{}'.format(base['slugpath'], base['branch'],
 dog = json.loads(requests.get('https://dog.ceo/api/breeds/image/random').text)['message']
 
 with open(base['file'], 'w', encoding='utf-8') as fh:
-    fh.write(requests.get(url).text.replace('/dog/', '[🐕 Random dog!]({})'.format(dog)))
+    fh.write(open('template.raw', 'r', encoding='utf-8').read().replace('/dog/', '[🐕 Random dog!]({})'.format(dog)))
 fh.close()
 sha = json.loads(requests.get('https://api.github.com/repos/{}/contents/README.md'.format(base['slugpath'])).text)['sha']
 r = requests.put('https://api.github.com/repos/{}/contents/{}'.format(base['slugpath'], base['file']),
