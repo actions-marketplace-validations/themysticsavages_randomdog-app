@@ -2,6 +2,7 @@ import base64
 import requests
 import datetime
 import json
+import sys
 import os
 
 os.chdir(os.getcwd())
@@ -16,7 +17,7 @@ with open(base['file'], 'w', encoding='utf-8') as fh:
 fh.close()
 sha = json.loads(requests.get('https://api.github.com/repos/{}/contents/README.md'.format(base['slugpath'])).text)['sha']
 r = requests.put('https://api.github.com/repos/{}/contents/{}'.format(base['slugpath'], base['file']),
-  headers = {'Authorization': 'Token {}'.format(base['token'])},
+  headers = {'Authorization': 'Token {}'.format(sys.argv[1])},
   json = {
     'message': 'push {}, {}'.format(base['file'], datetime.date.today().strftime("%d/%m/%Y")),
     'content': base64.b64encode(open(base['file'], 'r', encoding='utf-8').read().encode()).decode(),
