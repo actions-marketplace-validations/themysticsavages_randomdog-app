@@ -2,6 +2,9 @@ import base64
 import requests
 import datetime
 import json
+import os
+
+print(os.listdir())
 
 base = json.loads(open('config.json', 'r').read())
 url = 'https://raw.github.com/{}/{}/{}'.format(base['slugpath'], base['branch'], base['file'])
