@@ -24,4 +24,4 @@ r = requests.put('https://api.github.com/repos/{}/contents/{}'.format(base['slug
     'branch': base['branch'],
     'sha': sha
    })
-print('executed sucessfully :)')
+print(r.text)
