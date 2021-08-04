@@ -1,0 +1,7 @@
+name: 'randomdog-app'
+description: 'Get a random doggo in a project README'
+runs:
+  using: 'python'
+branding:
+  icon: 'image'
+  color: 'black'
