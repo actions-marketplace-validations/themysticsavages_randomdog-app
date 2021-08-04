@@ -1,4 +1,8 @@
 name: "app-randomdog"
+author: "themysticsavages"
 description: "Update any file daily to show a random dog link"
 runs:
   using: "python"
+branding:
+  icon: "image"
+  color: "black"
