@@ -5,6 +5,7 @@ import json
 import os
 
 os.chdir(os.getcwd())
+print(os.listdir())
 
 base = json.loads(open('config.json', 'r').read())
 url = 'https://raw.github.com/{}/{}/{}'.format(base['slugpath'], base['branch'], base['file'])
