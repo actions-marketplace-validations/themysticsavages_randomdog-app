@@ -12,11 +12,22 @@ Of course it can! But you will need to do this on your own.
 
 ### How do I use this?
 
-Usage of this program is not too hard. Just go into the settings page of your Github account.
-Then go to Developer settings, and create a personal access token.
+The easy way would be to go to the action in [Github Marketplace](https://git.io/JRT3x), get that special yml snippet, and be done. It will run when triggered or every day at 12:00 UTC.
 
-In addition to your token, you need an existing repo with a `README.md` file in it.
-Use the slugpath (ex: torvalds/linux)
+### Self usage
 
-Throw both of these things into the `config.json` file. After that, open up a console window and type `python auto.py`.
-This script executes the randomdog function every day. Why not more often? Probably to avoid rate-limiting.
+Uhh... requirements:
+
+- Python < 3.6
+- Requests
+- Git (optional)
+
+To start, download this project or clone it. Then, navigate to the `randomdog` directory and open `config.json`. Fill the values with YOUR information. A repository, it's default branch, and the file you want to show the dog link. Next, take the file content, throw it into `template.raw` and place `/dog/` wherever you like. 
+
+Now you need to create a personal access token to edit the repository file. Once you have that, open up a terminal in `randomdog` and run 
+
+```
+python randomdog.py <token>
+```
+
+You should see a pushed changed in the repository.
