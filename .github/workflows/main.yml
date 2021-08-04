@@ -1,4 +1,4 @@
-name: CI
+name: 'app-randomdog'
 
 on:
   push:
@@ -24,4 +24,7 @@ jobs:
           pip install requests
       - name: Run app-randomdog
         run: |
+          python ./main.py ${{ secrets.SECRET }}
+          echo Done! File should be pushed!
+        
           python ./app.py
