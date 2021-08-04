@@ -1,0 +1,2 @@
+import randomdog
+randomdog.push()
