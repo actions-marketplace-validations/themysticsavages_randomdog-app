@@ -1,0 +1,4 @@
+name: "app-randomdog"
+description: "Update any file daily to show a random dog link"
+runs:
+  using: "python"
