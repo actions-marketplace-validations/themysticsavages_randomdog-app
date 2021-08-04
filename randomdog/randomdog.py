@@ -4,7 +4,7 @@ import datetime
 import json
 import os
 
-print(os.listdir())
+os.chdir(os.getcwd())
 
 base = json.loads(open('config.json', 'r').read())
 url = 'https://raw.github.com/{}/{}/{}'.format(base['slugpath'], base['branch'], base['file'])
