@@ -7,7 +7,7 @@ import os
 os.chdir(os.getcwd())
 print(os.listdir())
 
-base = json.loads(open('config.json', 'r').read())
+base = json.loads(open('./randomdog/config.json', 'r').read())
 url = 'https://raw.github.com/{}/{}/{}'.format(base['slugpath'], base['branch'], base['file'])
 dog = json.loads(requests.get('https://dog.ceo/api/breeds/image/random').text)['message']
 
