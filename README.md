@@ -12,13 +12,13 @@ Of course it can! But you will need to do this on your own.
 
 ### How do I use this?
 
-The easy way would be to go to the action in [Github Marketplace](https://git.io/JRT3x), get that special yml snippet, and be done. It will run when triggered or every day at 12:00 UTC.
+The easy way would be to go to the action in [Github Marketplace](https://git.io/JRT3x), get that special yml snippet. Then, add a personal access token as a repository secret. It will run when triggered or every day at 12:00 UTC.
 
 ### Self usage
 
 Uhh... requirements:
 
-- Python < 3.6
+- Python >= 3.6
 - Requests
 - Git (optional)
 
